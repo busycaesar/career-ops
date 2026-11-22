@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>career-ops Discover</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <h1>career-ops</h1>
+      </div>
+      <a id="open-board" class="link-btn" href="http://localhost:3001" target="_blank" rel="noreferrer">Open board ↗</a>
+    </header>
+
+    <section id="tab-card" class="card hidden">
+      <div class="card-meta">
+        <div class="card-label">Current tab</div>
+        <div id="tab-title" class="tab-title"></div>
+        <div id="tab-url" class="tab-url"></div>
+      </div>
+      <div class="tab-actions">
+        <button id="save-tab" type="button" class="btn-primary">Save job posting</button>
+        <button id="message-tab" type="button" class="btn-secondary">Message hiring manager</button>
+      </div>
+    </section>
+
+    <form id="discover-form" class="discover-form">
+      <label for="posting-input" class="field-label">Job posting</label>
+      <div class="input-box">
+        <textarea
+          id="posting-input"
+          rows="4"
+          placeholder="Paste one or more job links (one per line), or a job description (optionally with its link on the first line)…"
+        ></textarea>
+        <div class="input-footer">
+          <span class="hint">Ctrl+Enter to save</span>
+          <div class="input-actions">
+            <button id="message-input" type="button" class="btn-secondary" disabled>Message HM</button>
+            <button id="save-input" type="submit" class="btn-primary" disabled>Save to pipeline</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div id="feedback" class="feedback hidden"></div>
+
+    <section id="message-card" class="card message-card hidden">
+      <div class="message-header">
+        <span class="card-label message-label">Message for hiring manager</span>
+        <div class="message-actions">
+          <button id="copy-message" type="button" class="btn-primary btn-sm">Copy</button>
+          <button id="regen-message" type="button" class="btn-secondary btn-sm">Regenerate</button>
+          <button id="close-message" type="button" class="btn-icon" aria-label="Close" title="Close">✕</button>
+        </div>
+      </div>
+      <textarea id="message-output" class="message-output" rows="10" spellcheck="true"></textarea>
+    </section>
+
+    <script src="api.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

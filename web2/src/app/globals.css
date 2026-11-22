@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Dark palette and brand orange, taken from web/'s design tokens. */
+@theme {
+  --color-brand: hsl(26 73% 51%);
+  --color-brand-soft: hsl(26 73% 51% / 0.12);
+  --color-brand-text: hsl(26 73% 51%);
+  --color-background: #0a0a0a;
+  --color-surface: #161616;
+  --color-surface-hover: #232323;
+  --color-border: #262626;
+  --color-foreground: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-faint: #8b8b95;
+  --color-landing: #e4e2d0;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}

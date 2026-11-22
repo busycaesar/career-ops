@@ -1,0 +1,35 @@
+{
+  "name": "@career-ops/web2",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Custom career-ops dashboard.",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=23.4.0"
+  },
+  "dependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "clsx": "^2.1.1",
+    "js-yaml": "^5.5.0",
+    "lucide-react": "^1.72.0",
+    "next": "16.4.1",
+    "playwright-core": "1.64.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "25.9.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "postcss": "^8.5.18",
+    "tailwindcss": "^4.2.2",
+    "typescript": "7.0.2"
+  }
+}
