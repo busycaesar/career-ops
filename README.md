@@ -1,3 +1,14 @@
+> **Personal Fork Notice** — This repository is a customized fork of [**career-ops**](https://github.com/career-ops-hq/career-ops), originally created by [**@santifer**](https://github.com/santifer) and 800+ open-source contributors. All core evaluation, CV tailoring, ATS checking, and scanning workflows belong to upstream `career-ops`.
+>
+> **What's added in this fork** (see [**web2/README.md**](web2/README.md) for full details & setup):
+> - **Custom Kanban Dashboard (`web2/`)** — Drag-and-drop pipeline (`Interested → Evaluate → Custom Resume → Application → Applied`) backed by detached workers, inline notes/referrals, and a two-section **Application** column (*Ready to submit* vs. *Fill it yourself*).
+> - **Browser Extension (`web2/extension/`)** — Save job links/descriptions directly from LinkedIn or any job board (with active-tab fallback for login walls) and draft hiring-manager outreach messages.
+> - **Employer-Link Resolution** — Automatically looks up the employer's own careers/ATS posting for third-party listings and records why when a posting can't be confirmed.
+> - **Automatic Primary → Backup CLI Fallback** — Silently switches to a backup CLI (`agy` / `gemini`) when Claude hits a usage limit, alerting only if both models are limited.
+> - **GitHub Project Sync (`/sync-projects`)** — `github-projects.mjs` + `.claude/skills/sync-projects/SKILL.md` to import new public GitHub repos into `cv.md`.
+
+---
+
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/wordmark-dark.svg"><img src="docs/wordmark-light.svg" alt="career-ops" width="250" height="56"></picture></p>
 
 <p align="center">The open-source AI job search agent.</p>
